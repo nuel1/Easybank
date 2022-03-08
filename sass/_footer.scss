@@ -1,0 +1,36 @@
+.page__footer {
+  background: getColorByRange("700");
+  * {
+    color: getColorByRange("100");
+  }
+}
+
+footer {
+  padding: 3rem 0;
+}
+
+#name {
+  fill: getColorByRange("100");
+}
+
+.footer__col-2 {
+  margin-bottom: 1.7rem;
+
+  a {
+    line-height: 2.5;
+  }
+}
+
+.social-link-wrapper {
+  a:hover {
+    path {
+      fill: getColorByRange("600");
+    }
+  }
+}
+
+.footer__col-3 {
+  p {
+    color: getColorByRange("400");
+  }
+}

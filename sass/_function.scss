@@ -1,0 +1,28 @@
+@import "./variable";
+
+/**
+    @param {string} range properties of the $colors map defined as range of values for each color
+    given as value for this properties.
+
+    @return {} returns a color found in the $colors map
+*/
+
+@function getColorByRange($range) {
+  @if (type-of($range == "string")) {
+    @return map-get($colors, $range);
+  }
+}
+
+/**
+    @param {Array} arg a two length array of string values representing, 
+    for each item, a specific color in the $colors map
+
+    @return {CSS Function} returns a css function, linear-gradient that holds 
+    the final result of the combined colors 
+*/
+@function getColorGradient($arg...) {
+  $colorOne: getColorByRange(nth($arg, 1));
+  $colorTwo: getColorByRange(nth($arg, 2));
+
+  @return linear-gradient(90deg, $colorOne, $colorTwo);
+}

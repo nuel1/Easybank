@@ -1,0 +1,79 @@
+// Features Section
+//__________________
+
+.features {
+  background: getColorByRange("300");
+}
+
+.features__list {
+  li {
+    margin-bottom: 2rem;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.features__header {
+  margin-bottom: 3rem;
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+// Articles Section
+//_________________
+
+.articles__list {
+  li {
+    background: getColorByRange("100");
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.articles__details {
+  padding: 0 1rem;
+}
+
+.arthur {
+  font-size: 0.7rem;
+}
+
+.articles__info p {
+  font-size: 0.75rem;
+}
+
+.articles__img__container {
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.494);
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+  img {
+    vertical-align: middle;
+    transform: scale(1);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.3);
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+// .articles__img_container {
+
+// }

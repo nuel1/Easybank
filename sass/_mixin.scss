@@ -1,0 +1,58 @@
+@import "./function";
+
+// Mixin for primary button
+
+@mixin primaryButton {
+  display: table;
+  padding: 0.8rem 0rem;
+  border-radius: 50px;
+  color: getColorByRange("100");
+  font-family: $family;
+  font-weight: $weight400;
+  z-index: 1;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background: getColorGradient("600", "500");
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.8;
+    }
+  }
+}
+
+@mixin min($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin max($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin minMax($arg...) {
+  @if (length($arg) > 1) {
+    @media (min-width: nth($arg, 1)) and (max-width: nth($arg, 2)) {
+      @content;
+    }
+  }
+  else {
+    @warn 'Expected two arguments {min value} & {max value}';
+  }
+}

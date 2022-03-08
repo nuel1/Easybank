@@ -1,0 +1,69 @@
+html {
+  font-size: $textSize;
+  font-family: $family;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+small,
+b,
+kbd,
+li,
+ul,
+span,
+div,
+img,
+section,
+article,
+footer,
+svg,
+path {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+img,
+svg {
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p,
+small,
+span {
+  color: getColorByRange("400");
+}

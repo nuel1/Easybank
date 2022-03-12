@@ -457,7 +457,7 @@ footer .logo__shell,
   }
 
   .hero__cover__img {
-    top: -4rem;
+    top: 0rem;
     right: -12rem;
 
     img {
@@ -474,6 +474,7 @@ footer .logo__shell,
     h1 {
       padding-right: 20rem;
       font-size: 2.8rem;
+      margin-right: 3rem;
     }
 
     p {
@@ -564,6 +565,10 @@ footer .logo__shell,
     p {
       width: 50rem;
     }
+
+    h1 {
+      font-size: 3.5rem;
+    }
   }
 
   .hero__header {
@@ -574,6 +579,7 @@ footer .logo__shell,
 @include min(1239px) {
   .hero__cover__img {
     right: -9rem;
+    top: 2.5rem;
   }
 }
 
